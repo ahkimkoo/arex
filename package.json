@@ -1,0 +1,28 @@
+{
+  "name": "arex",
+  "version": "0.0.1",
+  "description": "node article extractor",
+  "main": "index.js",
+  "scripts": {
+    "test": "test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahkimkoo/arex.git"
+  },
+  "keywords": [
+    "article",
+    "extractor",
+    "nodejs"
+  ],
+  "author": "cherokee",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ahkimkoo/arex/issues"
+  },
+  "homepage": "https://github.com/ahkimkoo/arex#readme",
+  "dependencies": {
+    "bufferhelper": "^0.2.1",
+    "iconv-lite": "^0.4.13"
+  }
+}
