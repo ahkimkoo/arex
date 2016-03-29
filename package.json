@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/ahkimkoo/arex#readme",
   "dependencies": {
+    "async": "^2.0.0-rc.2",
     "bufferhelper": "^0.2.1",
     "iconv-lite": "^0.4.13",
-    "nodejieba": "^1.4.10",
-    "pagerank-js": "^0.3.0"
+    "nodejieba": "^1.4.10"
   }
 }
