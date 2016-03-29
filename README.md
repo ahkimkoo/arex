@@ -10,14 +10,15 @@ npm install arex
 ```javascript
 var arex = require('arex');
 //example 1
-arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-ifxqhmve9227502.shtml',(err,result)=>{
+arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-ifxqhmve9227502.shtml',120,(err,result)=>{
+                //120: summary limited, if you do not need summary set it to false.
 		//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 		console.log(result['content']);
 	});
 
 
 //example 2
-var result = arex.get_article_sync('<html>.......</html>');
+var result = arex.get_article_sync('<html>.......</html>',120);
 ```
 
 #Test
@@ -31,7 +32,7 @@ git clone https://github.com/ahkimkoo/arex.git
 ```shell
 cd arex
 npm install
-node test/test.js http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-ifxqhmve9227502.shtml
+node test/test.js http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-ifxqhmve9227502.shtml 120
 ```
 
 ##About algorithm
