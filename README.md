@@ -9,16 +9,21 @@ npm install arex
 #使用例子:
 ```javascript
 var arex = require('arex');
-//example 1
+//example 1, 给定网址自动抓取，提取正文，生成摘要
 arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-ifxqhmve9227502.shtml',120,(err,result)=>{
-                //120: summary limited, if you do not need summary set it to false.
+                //120: 摘要长度为120，如果不需要生成摘要此参数传入false.
 		//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 		console.log(result['content']);
-	});
+});
 
+//example 2, 给html内容，提取正文，生成摘要
+result = arex.get_article_sync('<html.........</html>',120);//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 
-//example 2
-var result = arex.get_article_sync('<html>.......</html>',120);
+//example 3, 给html内容，生成摘要
+//summarize(content, exptd_len=120, shingle=false, min=150, max=350)
+//shingle的意义: 以摘要长度的句子组合为单位计算权重，shingle为false则以自然句为单位计算权重
+var summary = arex.summarize('<html>.......</html>', 120, true);
+var summary = arex.summarize('<html>.......</html>', 0.04, true, 100, 300);//摘要长度比例 4%, 最短 100, 最长 300
 ```
 
 #测试
@@ -61,11 +66,15 @@ arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-i
                 //120: summary limited, if you do not need summary set it to false.
 		//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 		console.log(result['content']);
-	});
-
+});
 
 //example 2
-var result = arex.get_article_sync('<html>.......</html>',120);
+result = arex.get_article_sync('<html.........</html>',120);//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
+
+//example 3
+//summarize(content, exptd_len=120, shingle=false, min=150, max=350)
+var summary = arex.summarize('<html>.......</html>', 120, true);
+var summary = arex.summarize('<html>.......</html>', 0.04, true, 100, 300);//summary ratio 4%, min length 100, max length 300
 ```
 
 #Test
