@@ -1,6 +1,6 @@
 {
   "name": "arex",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "node article extractor",
   "main": "lib/arex.js",
   "scripts": {
