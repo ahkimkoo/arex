@@ -4,3 +4,5 @@ const content  = `<p><strong>金投银行</strong>（http://bank.cngold.org/）0
 
 // console.log(arex.summarize(content, 0.04, true, 0, 80, []));
 console.log(arex.summarize(content, 0.04, true, 0, 80, ['@[\d\w]+\.[\w]', 'http://']));
+
+console.dir(arex.sentiment(content));
