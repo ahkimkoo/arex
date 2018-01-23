@@ -1,6 +1,6 @@
 {
   "name": "arex",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "node article extractor",
   "main": "lib/arex.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ahkimkoo/arex#readme",
   "dependencies": {
     "async": "^2.0.0-rc.2",
+    "brain.js": "1.0.0-rc.3",
     "bufferhelper": "^0.2.1",
     "iconv-lite": "^0.4.13",
     "nodejieba": "^2.2.4"
