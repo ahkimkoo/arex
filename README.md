@@ -20,7 +20,7 @@ arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-i
 result = arex.get_article_sync('<html.........</html>',120);//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 
 //example 3, 给html内容，生成摘要
-//summarize(content, exptd_len=120, shingle=false, min=150, max=350, filter=[])
+//summarize(content, exptd_len=120, shingle=false, min=150, max=350, filter=[], title)
 //shingle的意义: 以摘要长度的句子组合为单位计算权重，shingle为false则以自然句为单位计算权重, filter是过滤规则，符合规则的段落都会被过滤不作为摘要
 var summary = arex.summarize('<html>.......</html>', 120, true);
 var summary = arex.summarize('<html>.......</html>', 0.04, true, 100, 300);//摘要长度比例 4%, 最短 100, 最长 300
@@ -72,7 +72,7 @@ arex.get_article('http://finance.sina.com.cn/consume/puguangtai/2016-03-15/doc-i
 result = arex.get_article_sync('<html.........</html>',120);//result: {"title":"...","content":"....", "summary":"...", "pubdate":"..."}
 
 //example 3
-//summarize(content, exptd_len=120, shingle=false, min=150, max=350, filter=[])
+//summarize(content, exptd_len=120, shingle=false, min=150, max=350, filter=[], title)
 var summary = arex.summarize('<html>.......</html>', 120, true);
 var summary = arex.summarize('<html>.......</html>', 0.04, true, 100, 300);//summary ratio 4%, min length 100, max length 300
 ```
