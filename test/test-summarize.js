@@ -8,6 +8,6 @@ const content  = `<div class="flash_detail_1">
 		</div>`;
 
 // console.log(arex.summarize(content, 0.04, true, 0, 80, []));
-console.log(arex.summarize(content, 0.1, true, 0, 200, ['@[\d\w]+\.[\w]', 'http://']));
+console.log(arex.summarize(content, 0.1, true, 0, 200, ['@[\d\w]+\.[\w]', 'http://'], 'FF成功完成了超10亿美元A轮股权融资'));
 
 // console.dir(arex.sentiment(content));
