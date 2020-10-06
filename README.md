@@ -1,6 +1,9 @@
 # arex
 node.js实现自动提取文章正文， 标题， 发布日期。自动生成文章摘要.
 
+# Node版本
+建议v6.17.0
+
 #安装
 ```shell
 npm install arex
