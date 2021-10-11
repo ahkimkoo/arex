@@ -4,6 +4,20 @@ node.js实现自动提取文章正文， 标题， 发布日期。自动生成�
 # Node版本
 建议v6.17.0
 
+
+# Http 服务
+
+运行
+```bash
+node server.js
+```
+
+客户端链接
+
+```bash
+curl -X POST -d '{"url":"https://export.shobserver.com/baijiahao/html/411796.html","size":100,"smooth":false}' http://localhost:3824|jq -r .
+```
+
 #安装
 ```shell
 npm install arex
